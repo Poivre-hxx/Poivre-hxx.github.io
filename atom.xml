@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-01-15T11:49:47.253Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>几种直接光照计算方法的不同</title>
+    <link href="http://example.com/2021/12/13/%E5%87%A0%E7%A7%8D%E7%9B%B4%E6%8E%A5%E5%85%89%E7%85%A7%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%9A%84%E4%B8%8D%E5%90%8C/"/>
+    <id>http://example.com/2021/12/13/%E5%87%A0%E7%A7%8D%E7%9B%B4%E6%8E%A5%E5%85%89%E7%85%A7%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%9A%84%E4%B8%8D%E5%90%8C/</id>
+    <published>2021-12-13T06:52:54.000Z</published>
+    <updated>2022-01-15T11:49:47.253Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Phong光照模型"><a href="#Phong光照模型" class="headerlink" title="Phong光照模型"></a>Phong光照模型</h2><h3 id="Phong光照模型的计算公式"><a href="#Phong光照模型的计算公式" class="headerlink" title="Phong光照模型的计算公式"></a>Phong光照模型的计算公式</h3><p>（环境光, 镜面反射光,漫反射）</p><img src="/2021/12/13/%E5%87%A0%E7%A7%8D%E7%9B%B4%E6%8E%A5%E5%85%89%E7%85%A7%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%9A%84%E4%B8%8D%E5%90%8C/image-20220115194712270.png" alt="image-20220115194712270" style="zoom:50%;"><h3 id="伪代码"><a href="#伪代码" class="headerlink" title="伪代码"></a>伪代码</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 屏幕上的每一条扫描线 y <span class="keyword">do</span></span><br><span class="line">begin</span><br><span class="line">将数组Color初始化成为y扫描线的背景颜色值；</span><br><span class="line">   <span class="keyword">for</span> y扫描线上的每一可见取间段s中的每个点 (x,y) <span class="keyword">do</span></span><br><span class="line">      begin</span><br><span class="line">      设 (x,y) 对应的空间可见点为P;</span><br><span class="line">      求出P点处的单位法向量N，P点的单位入射光向量L和单位视线向量V，求出L在P点的单位镜面反射向量       R；</span><br><span class="line">      (r, g, b) = <span class="built_in">ka</span>(rpa, gpa, bpa) + ∑ [ <span class="built_in">kd</span>(rpd, gpd, bpd) cosθ + <span class="built_in">ks</span>(rps, gps,         bps) cosnα ]</span><br><span class="line">      置<span class="built_in">Color</span>(x,y) = (r, g, b)</span><br><span class="line">      end;</span><br><span class="line">显示Color;</span><br><span class="line">end;</span><br></pre></td></tr></table></figure><p>tips:Phong光照模型只是一种光照的计算方法，在后面的Phong-shading、Gouraud-shading等在物体表面的光线投射中得到广泛应用。</p><h2 id="Blinn-Phong光照模型"><a href="#Blinn-Phong光照模型" class="headerlink" title="Blinn-Phong光照模型"></a>Blinn-Phong光照模型</h2><h3 id="对Phong模型的改进"><a href="#对Phong模型的改进" class="headerlink" title="对Phong模型的改进"></a>对Phong模型的改进</h3><p>Phong模型会出现光照截断或者过度不自然的现象。这是由于反射光方向和视线方向夹角小于90，才会使的值为非零。</p><p>BlinnPhong使用视线与反射光线的中间向量与法线的点乘进行计算，这样做在任何情况下镜面反射都不会小于0。从而解决Phong模型面临的问题。</p><h3 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h3><p><strong>最终颜色 = 直射光颜色 * 反射光颜色 * pow(max(0, dot(法线方向, 视野与光线中间向量)), 光泽度(gloss)) + 漫反射颜色 + 环境光颜色</strong></p><h2 id="Phong-shading（双线性法向插值）"><a href="#Phong-shading（双线性法向插值）" class="headerlink" title="Phong-shading（双线性法向插值）"></a>Phong-shading（双线性法向插值）</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>用各个顶点的<strong>法向量</strong>插值计算面片上各个像素上的法向，再对面片上的每个像素进行一个颜色的计算。</p><p>速度较慢，但是效果好，高光点的位置很明确。</p><h2 id="Gouraud-shading（双线性光强插值）"><a href="#Gouraud-shading（双线性光强插值）" class="headerlink" title="Gouraud-shading（双线性光强插值）"></a>Gouraud-shading（双线性光强插值）</h2><h3 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h3><p>对顶点进行一个颜色的计算，然后用顶点的<strong>颜色</strong>进行插值计算面片上各个像素的颜色值。</p><p>过程很快，颜色过渡较平滑，但是镜面反射的效果不是很理想（高光点的部分会扩大）。</p><h2 id="Flat-shading"><a href="#Flat-shading" class="headerlink" title="Flat-shading"></a>Flat-shading</h2><h3 id="特点-2"><a href="#特点-2" class="headerlink" title="特点"></a>特点</h3><p>根据每个面片的法向量来计算光线以及颜色，所以每个三角面片上的像素会赋一样的效果，很快。</p><h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><img src="/2021/12/13/%E5%87%A0%E7%A7%8D%E7%9B%B4%E6%8E%A5%E5%85%89%E7%85%A7%E8%AE%A1%E7%AE%97%E6%96%B9%E6%B3%95%E7%9A%84%E4%B8%8D%E5%90%8C/image-20220115194911084.png" alt="image-20220115194911084" style="zoom:50%;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Phong光照模型&quot;&gt;&lt;a href=&quot;#Phong光照模型&quot; class=&quot;headerlink&quot; title=&quot;Phong光照模型&quot;&gt;&lt;/a&gt;Phong光照模型&lt;/h2&gt;&lt;h3 id=&quot;Phong光照模型的计算公式&quot;&gt;&lt;a href=&quot;#Phong光照模型的计</summary>
+      
+    
+    
+    
+    
+    <category term="计算机教你做人图形学" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E4%BD%A0%E5%81%9A%E4%BA%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三维实体造型的知识</title>
+    <link href="http://example.com/2021/11/20/%E4%B8%89%E7%BB%B4%E5%AE%9E%E4%BD%93%E9%80%A0%E5%9E%8B%E7%9A%84%E7%9F%A5%E8%AF%86/"/>
+    <id>http://example.com/2021/11/20/%E4%B8%89%E7%BB%B4%E5%AE%9E%E4%BD%93%E9%80%A0%E5%9E%8B%E7%9A%84%E7%9F%A5%E8%AF%86/</id>
+    <published>2021-11-20T08:17:47.000Z</published>
+    <updated>2021-11-20T09:26:52.012Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1、问题起源"><a href="#1、问题起源" class="headerlink" title="1、问题起源"></a>1、问题起源</h5><p>三维实体造型内容太多啦，进行一个梳的理。</p><h5 id="2、细分"><a href="#2、细分" class="headerlink" title="2、细分"></a>2、细分</h5><ul><li>线框</li></ul><p>通过收集边表以及顶点表（图1）进行一个构建。</p><p><img src="/2021/11/20/%E4%B8%89%E7%BB%B4%E5%AE%9E%E4%BD%93%E9%80%A0%E5%9E%8B%E7%9A%84%E7%9F%A5%E8%AF%86/image-20211120170034410.png" alt="image-20211120170034410"></p><p>（图1）</p><p>优点：① 构建、修改、裁剪和变换较为<em><strong>容易</strong></em></p><p>​            ② 处理<em><strong>快速</strong></em></p><p>缺点：① 信息不够充分，<strong>会有歧义</strong>（图2），甚至围成的图形会违背实际（图3）</p><p><img src="/2021/11/20/%E4%B8%89%E7%BB%B4%E5%AE%9E%E4%BD%93%E9%80%A0%E5%9E%8B%E7%9A%84%E7%9F%A5%E8%AF%86/image-20211120170111203.png" alt="image-20211120170111203"></p><p>（图3）</p><p><img src="/2021/11/20/%E4%B8%89%E7%BB%B4%E5%AE%9E%E4%BD%93%E9%80%A0%E5%9E%8B%E7%9A%84%E7%9F%A5%E8%AF%86/image-20211120170124874.png" alt="image-20211120170124874"></p><p>（图4）</p><ul><li>边界表示（Brep == Boundary Representation）</li></ul><p>通过面片来构成模型（采用Baumgart的翼边数据结构）</p><p>Baumgart：以面的外侧<strong>clockwise</strong>的方向（=&gt;沿着边的方向遍历每个面时，面始终在边的右侧）记录单个面，面的法向量指向外部；记录顶点、邻面、前驱边和后继边。</p><ul><li>构造实体几何（与边界表示结合的混合表示）</li></ul><p>通过基本几何体的<strong>几何变换</strong>（平移、旋转、缩放）以及<strong>布尔运算</strong>获得；</p><p>优点：① 信息丰富（物体生成过程、物体的表示）</p><p>​            ② 面向CAD、CAM过程</p><p>缺点：① 耗时</p><p>​            ② 限制了外形的修改</p><ul><li>空间表示</li></ul><p>对空间进行一个划分</p><p><em><strong>将空间物体化成实体的体素</strong></em></p><p>表示方法：空间枚举、四叉树（<em><strong>quadtree</strong></em>）、八叉树(<em><strong>octree</strong></em>)、二叉树(<em><strong>binary tree</strong></em>)、BSP树</p><ul><li>扫掠表示</li></ul><p>沿着某个方式对物体进行一个逐步地扫</p><p>方式：平移扫掠、旋转扫掠</p><ul><li>多边形表示</li></ul><p><em><strong>将物体的表面化成三角面片</strong></em></p><p>数据结构：OBJ（通用格式）</p><p>优点：① 表示简单</p><p>​            ② 可以表示具有任意拓扑的物体</p><p>​            ③ 可以表示具有丰富细节的物体</p><p>​            ④ 支持大部分图形硬件（全网通用）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1、问题起源&quot;&gt;&lt;a href=&quot;#1、问题起源&quot; class=&quot;headerlink&quot; title=&quot;1、问题起源&quot;&gt;&lt;/a&gt;1、问题起源&lt;/h5&gt;&lt;p&gt;三维实体造型内容太多啦，进行一个梳的理。&lt;/p&gt;
+&lt;h5 id=&quot;2、细分&quot;&gt;&lt;a href=&quot;#2、细分&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="计算机教你做人图形学" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E4%BD%A0%E5%81%9A%E4%BA%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于图元裁剪中入点与出点的讨论</title>
+    <link href="http://example.com/2021/10/28/%E5%85%B3%E4%BA%8E%E5%9B%BE%E5%85%83%E8%A3%81%E5%89%AA%E4%B8%AD%E5%85%A5%E7%82%B9%E4%B8%8E%E5%87%BA%E7%82%B9%E7%9A%84%E8%AE%A8%E8%AE%BA/"/>
+    <id>http://example.com/2021/10/28/%E5%85%B3%E4%BA%8E%E5%9B%BE%E5%85%83%E8%A3%81%E5%89%AA%E4%B8%AD%E5%85%A5%E7%82%B9%E4%B8%8E%E5%87%BA%E7%82%B9%E7%9A%84%E8%AE%A8%E8%AE%BA/</id>
+    <published>2021-10-27T16:07:58.000Z</published>
+    <updated>2022-01-15T11:51:02.359Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1、问题起源"><a href="#1、问题起源" class="headerlink" title="1、问题起源"></a>1、问题起源</h5><p>在计图第五章的mooc介绍中，煞有介事地提到了要写出入点和出点。但是笔者一时没有缓想到该怎么求。笔者只能在openGL中算出线段与裁剪框的交点，并且在C++中引用vector的知识来解决方向问题。但是，这个问题有更优解吗？</p><h5 id="2、研究过程"><a href="#2、研究过程" class="headerlink" title="2、研究过程"></a>2、研究过程</h5><p>以下是教材实验教程给出的两个示例</p><p>（1）</p><p>（图1）</p><p><img src="/2021/10/28/%E5%85%B3%E4%BA%8E%E5%9B%BE%E5%85%83%E8%A3%81%E5%89%AA%E4%B8%AD%E5%85%A5%E7%82%B9%E4%B8%8E%E5%87%BA%E7%82%B9%E7%9A%84%E8%AE%A8%E8%AE%BA/image-20220115195059844.png" alt="image-20220115195059844"></p><p>图1是Cohen-Sutherland算法关于出点和入点判定的代码展示，从示例中我们可以看到，在Cohen-Sutherland算法中，首先，我们判断直线两端点是否在直线内。（1+1=1；1+0=0；0+0=0；）然后，我们将被裁剪线段的两个端点分别求得与“左”“右“”上”“下“的边界的交点。在这里，我们可以将2进制与编码match起来，”0001“match左，”0010“match右边，”0100“match下，”1000“match上。</p><p>这样一来，入点和出点的判断好像就自然地解决了：入口端的端点会自动匹配入点，出口端的端点会自动匹配出点，这样一来，可以实现角度累积法与Cohen-Sutherland法实现完美融合啦。</p><p>（2）</p><p>（图2）</p><p>![carbon (1)](关于图元裁剪中入点与出点的讨论/carbon (1).png)</p><p><img src="/2021/10/28/%E5%85%B3%E4%BA%8E%E5%9B%BE%E5%85%83%E8%A3%81%E5%89%AA%E4%B8%AD%E5%85%A5%E7%82%B9%E4%B8%8E%E5%87%BA%E7%82%B9%E7%9A%84%E8%AE%A8%E8%AE%BA/carbon-16354703462891.png" alt="carbon-16354703462891"></p><p>图2是Weiler-Atherton算法的关于出点和入点判定的代码展示。Weiler-Atherton算法是通过anticlockwise遍历裁剪多边形和被裁剪多边形的方式实现目的。当判断出点和入点时，它只需判断it=&gt;iterator的点是在裁剪多边形的内部还是外部，当该点在内部时，即表示我们要求的点是出点，反之即是入点。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1、问题起源&quot;&gt;&lt;a href=&quot;#1、问题起源&quot; class=&quot;headerlink&quot; title=&quot;1、问题起源&quot;&gt;&lt;/a&gt;1、问题起源&lt;/h5&gt;&lt;p&gt;在计图第五章的mooc介绍中，煞有介事地提到了要写出入点和出点。但是笔者一时没有缓想到该怎么求。笔者只能在o</summary>
+      
+    
+    
+    
+    
+    <category term="计算机教你做人图形学" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E4%BD%A0%E5%81%9A%E4%BA%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于旋转矩阵和平移矩阵的逆矩阵的讨论</title>
+    <link href="http://example.com/2021/10/26/%E5%85%B3%E4%BA%8E%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E5%92%8C%E5%B9%B3%E7%A7%BB%E7%9F%A9%E9%98%B5%E7%9A%84%E9%80%86%E7%9F%A9%E9%98%B5%E7%9A%84%E8%AE%A8%E8%AE%BA/"/>
+    <id>http://example.com/2021/10/26/%E5%85%B3%E4%BA%8E%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E5%92%8C%E5%B9%B3%E7%A7%BB%E7%9F%A9%E9%98%B5%E7%9A%84%E9%80%86%E7%9F%A9%E9%98%B5%E7%9A%84%E8%AE%A8%E8%AE%BA/</id>
+    <published>2021-10-26T11:03:04.000Z</published>
+    <updated>2021-10-27T16:05:13.228Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="1、问题起源"><a href="#1、问题起源" class="headerlink" title="1、问题起源"></a>1、问题起源</h5><p>DR.Pan在Mooc第四章的作业中布置了有关立方体绕任意轴旋转的问题，笔者花了很长的时间纠结在写出平移矩阵和旋转矩阵的逆矩阵，甚至萌生了手工算数的方法。后来，在MR.曹的点拨下，发现了一个大坑。</p><h5 id="2、计算过程"><a href="#2、计算过程" class="headerlink" title="2、计算过程"></a>2、计算过程</h5><ul><li>常规处理办法</li><li><img src="/2021/10/26/%E5%85%B3%E4%BA%8E%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E5%92%8C%E5%B9%B3%E7%A7%BB%E7%9F%A9%E9%98%B5%E7%9A%84%E9%80%86%E7%9F%A9%E9%98%B5%E7%9A%84%E8%AE%A8%E8%AE%BA/21.10.26.png" alt="21.10.26"></li></ul><p>经过一连串的计算，你将得到，平移矩阵和旋转矩阵的逆矩阵竟然如此简单！</p><ul><li>动动脑子的办法</li></ul><p>在openGL中，常规绕任意轴旋转的方法是将旋转轴先平移至原点，然后分别绕y轴和Z轴以及X轴旋转至X轴上，再进行一个按要求的旋转，最后将旋转过程进行一个逆。由理论可知，T*T（-1）=1，也就是对这个立方体没有进行任何操作。那么我平移x的量，再平移-x的量，不也是没有进行任何操作么。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h5 id=&quot;1、问题起源&quot;&gt;&lt;a href=&quot;#1、问题起源&quot; class=&quot;headerlink&quot; title=&quot;1、问题起源&quot;&gt;&lt;/a&gt;1、问题起源&lt;/h5&gt;&lt;p&gt;DR.Pan在Mooc第四章的作业中布置了有关立方体绕任意轴旋转的问题，笔者花了很长的时间纠结在写出平移矩阵</summary>
+      
+    
+    
+    
+    
+    <category term="计算机教你做人图形学" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%95%99%E4%BD%A0%E5%81%9A%E4%BA%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+  </entry>
+  
+</feed>
