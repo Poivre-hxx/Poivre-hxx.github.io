@@ -909,7 +909,7 @@ category:
   enable: true
   banner_img: /bgs/category.png
   banner_img_height: 60
-  banner_mask_alpha: 0.1
+  banner_mask_alpha: 0.3
 
   # 分类的排序字段，前面带减号是倒序，不带减号是正序
   # Sort field for categories, with a minus sign is reverse order
@@ -938,7 +938,7 @@ tag:
   enable: true
   banner_img: /bgs/tag.png
   banner_img_height: 80
-  banner_mask_alpha: 0.1
+  banner_mask_alpha: 0.2
   tagcloud:
     min_font: 15
     max_font: 30
