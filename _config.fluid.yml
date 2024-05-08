@@ -995,29 +995,42 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /bgs/bg.png
+  banner_img: /bgs/links.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
+      title: "Wisteria",
+      intro: "生有热烈，藏与俗常",
+      link: "http://blog.psyqlk.space/",
+      avatar: "https://thirdqq.qlogo.cn/g?b=sdk&k=vFCLPytxmpqlzpxG55pdyw&s=640"
     }
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
+      title: "LYK0520",
+      intro: "",
+      link: "https://lyk0520.github.io/",
+      avatar: "	https://avatars.githubusercontent.com/u/73179946?v=4"
     }
     - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
+      title: "Nick Xu",
+      intro: "Complaining can't solve the problem",
+      link: "https://nickxu.me/",
+      avatar: "	https://nickxu.me/static/favicon.jpg"
+    }
+    - {
+      title: "Xav1er",
+      intro: "The sea I hang upside down will be your sky.",
+      link: "https://blog.xav1er.com/",
+      avatar: "https://blog.xav1er.com/img/avatar_hua8d20e7666a273a9633762be6e44d1ce_288482_300x0_resize_box_3.png
+"
+    }
+    - {
+      title: "JunYi Wu",
+      intro: "",
+      link: "https://blog.mjclouds.com/",
+      avatar: "	https://avatars.githubusercontent.com/u/53227298?v=4"
     }
 
   # 当成员头像加载失败时，替换为指定图片
@@ -1027,13 +1040,13 @@ links:
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
   custom:
-    enable: false
+    enable: true
     content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
 
   # 评论插件
   # Comment plugin
   comments:
-    enable: false
+    enable: true
     # 指定的插件，需要同时设置对应插件的必要参数
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
