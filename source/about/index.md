@@ -113,7 +113,7 @@ layout: about
         >
         </li>
         <li>
-        📫 邮箱地址: poivre0101@gmail.com
+        📫 邮箱: poivre0101@gmail.com
         </li>
     </ul>
 </article>
