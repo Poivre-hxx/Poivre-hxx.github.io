@@ -6,5 +6,12 @@ tags:
     - Notes
 categories: 
     - [Games, Games001]
+index_img: /pics/ALBasic/bg.png
+banner_img: /pics/ALBasic/banner.png
+comment: false
 ---
+数学好难喔ToT
+<!-- more -->
+![](/pics/ALBasic/线性代数基础.png)
+
 https://www.mubu.com/doc/3tlR2nN5MZP
