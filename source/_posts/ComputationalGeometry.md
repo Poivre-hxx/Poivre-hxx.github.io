@@ -13,5 +13,3 @@ comment: false
 最大的收获是rgb默认对应xyz轴（雾）
 <!-- more -->
 ![](/pics/ComputationalGeometry/计算几何.png)
-
-https://www.mubu.com/doc/3EC-_WZgH2P
