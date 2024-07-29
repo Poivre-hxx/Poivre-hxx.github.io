@@ -6,19 +6,19 @@
 title: 糊椒的小窝
 subtitle: ''
 description: ''
-keywords: 常看常新
+keywords:
 author: Poivre
 language: zh-CN
-timezone: 'Asia/Shanghai'
+timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://poivre-hxx.github.io
+url: http://example.com
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 syntax_highlighter: highlight.js
@@ -101,7 +101,4 @@ theme: fluid
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: git
-  repo: https://github.com/Poivre-hxx/Poivre-hxx.github.io.git
-  # example, https://github.com/hexojs/hexojs.github.io
-  branch: main
+  type: ''
