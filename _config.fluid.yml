@@ -449,6 +449,11 @@ footer:
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+      <div style="font-size: 0.85rem">
+      <span id="timeDate">载入天数...</span>
+      <span id="times">载入时分秒...</span>
+      <script src="/js/duration.js"></script>
+    </div>
   '
 
   # 展示网站的 PV、UV 统计数
@@ -1030,22 +1035,35 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主题博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
+      title: "LYK0520",
+      intro: "",
+      link: "https://lyk0520.github.io/",
+      avatar: "https://avatars.githubusercontent.com/u/73179946?s=100&v=4"
     }
     - {
-      title: "Fluid Docs",
-      intro: "主题使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
+      title: "Wisteria",
+      intro: "生有热烈，藏与俗常",
+      link: "https://blog.psyqlk.space/",
+      avatar: "https://thirdqq.qlogo.cn/g?b=sdk&k=vFCLPytxmpqlzpxG55pdyw&s=640"
     }
     - {
-      title: "Fluid Repo",
-      intro: "主题 GitHub 仓库",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
+      title: "nickxu",
+      intro: "Complaining can't solve the problem",
+      link: "https://nickxu.me/",
+      avatar: "	https://nickxu.me/static/favicon.jpg
+"
+    }
+    - {
+      title: "Xav1erSue",
+      intro: "心与浪漫随时为公主奉献",
+      link: "https://blog.xav1er.com/",
+      avatar: "https://blog.xav1er.com/img/avatar_hua8d20e7666a273a9633762be6e44d1ce_288482_300x0_resize_box_3.png"
+    }
+    - {
+      title: "liangzilixueha",
+      intro: "",
+      link: "https://blog.liangzilixueha.top/",
+      avatar: "https://avatars.githubusercontent.com/u/85008631?v=4"
     }
 
   # 当成员头像加载失败时，替换为指定图片
