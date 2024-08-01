@@ -5,12 +5,10 @@ tags:
   - Computational Geometry
 categories: 
   - [Games, Games001]
-index_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/comptationalgeometry-bg.png
-banner_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/computationalgeometrybanner.png
 date: 2024-05-11 00:00:00
 ---
 
-rgb三轴默认对应xyz三轴！
+[笔记_games001] rgb三轴默认对应xyz三轴！
 
 <!-- more -->
 

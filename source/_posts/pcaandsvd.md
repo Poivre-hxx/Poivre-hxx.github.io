@@ -5,12 +5,10 @@ tags:
   - Linear algebra
 categories: 
   - [Games, Games001]
-index_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/psa-svd-bg.png
-banner_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/psa-svd-banner.png
 date: 2024-05-13 00:00:00
 ---
 
-学费了学费了
+[笔记_games001] 学费了学费了
 
 <!-- more -->
 

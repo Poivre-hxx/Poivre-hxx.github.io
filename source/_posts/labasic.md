@@ -5,12 +5,10 @@ tags:
   - Linear algebra
 categories: 
   - [Games, Games001]
-index_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/albasic-bg.png
-banner_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/albasic-banner.png
 date: 2024-05-10 00:00:00
 ---
 
-数学真难tot
+[笔记_games001] 数学真难tot
 
 <!-- more -->
 
