@@ -561,7 +561,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/%E8%83%8C%E6%99%AF.png
+  banner_img:   https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/about.png
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
@@ -982,7 +982,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/about.png
+  banner_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/%E8%83%8C%E6%99%AF.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
   avatar: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/info.png
