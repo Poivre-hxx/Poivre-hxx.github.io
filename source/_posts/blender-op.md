@@ -4,7 +4,7 @@ tags:
   - Notes
   - shortcuts
 categories: 
-  - [blender]
+  - [tutorials]
 date: 2024-08-07 20:00:00
 ---
 
