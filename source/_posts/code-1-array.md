@@ -2,8 +2,9 @@
 title: 代码随想录一刷笔记_数组
 tags: 
   - Notes
-  - leet code
+  - leetCode
   - data structure
+  - C++
 categories: 
   - [代码随想录]
 date: 2024-08-06 20:00:00
