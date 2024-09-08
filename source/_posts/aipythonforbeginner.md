@@ -95,3 +95,111 @@ fStr = f"12 + 34 = {12 + 34: .0f}"
 - #### Helping AI make decisions
 
   将布尔值变量与循环语句相结合，编写条件语句。
+
+
+
+## Working with your own data and documents in python
+
+- #### Using files in Python
+
+  ```python
+  # 如何读取文件
+  f = open("email.txt", "r")
+  email = f.read()
+  f.close()
+  ```
+
+  
+
+- #### Loading and using your own data
+
+  这一章节讲述了①如何查看当前文件夹文件列表；②如何上传文件。
+
+- #### Reading journals from food critics
+
+  这一章节讲述了如何通过for循环批量地让llm进行反馈操作。
+
+- #### Extracting restaurant information from journal entries
+
+  这一章节讲述了①如何使用llm从一个文件中摘出特定信息；②如何写文件。
+
+  ```python
+  # 如何写文件
+  f = open("highlighted_text.html", "w")
+  f.write(html_response)
+  f.close()
+  ```
+
+  
+
+- #### Vacation planning using CSV files
+
+  这一章节讲述了如何处理csv格式的文件。
+
+  数据使用 list 保存，数据中的每一个字段使用 dictionary 保存。
+
+- #### Turing code blocks into reusable functions
+
+  这一章节讲述了函数。
+
+  ```python
+  # python中函数的格式
+  def func(para):
+      # ...
+      # return
+  # 如果需要返回数据，加return即可
+  ```
+
+  
+
+## Extending Python with Packages and APIs
+
+- #### Using funcitons from a local file
+
+  这一章节讲述了如何使用头文件中的函数。
+
+  ```python
+  # 引入头文件的某一函数
+  from file import function
+  function(15)
+  
+  # 引入头文件中的所有函数
+  # 使用file.func()的形式使用该文件中的函数
+  import file
+  file.func()
+  
+  # 引入头文件的所有函数
+  # 不要轻易使用这种方式，大咩
+  from file import *
+  func()
+  ```
+
+  
+
+- #### Built-in packages
+
+  这一章节讲述了如何使用python内置的包，包括 math & statistics & random 三个包。
+
+- #### Using third-party packages
+
+  这一章节讲述了①导入头文件时 as 的用法；②如何使用第三方的包，包括 pandas & matplotlib
+
+  ```python
+  # 使用as，你将得到一个创建可用于避免键入头文件全称的快捷方式
+  import pandas as pd
+  # 调用时，直接使用pd即可
+  pd.read_csv()
+  ```
+
+  
+
+- #### Installing packages
+
+  这一章节讲述了使用 !pip install xxx 的指令下载包体。
+
+- #### APIs to get data from the web
+
+  这一章节讲述了使用API获得实时讯息。
+
+- #### APIs to use AI models
+
