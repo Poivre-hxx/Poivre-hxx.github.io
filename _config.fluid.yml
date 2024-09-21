@@ -540,7 +540,7 @@ index:
   # 打开文章的标签方式
   # The browser tag to open the post
   # Available: _blank | _self
-  post_url_target: _self
+  post_url_target: _blank
 
   # 是否显示文章信息（时间、分类、标签）
   # Meta information of post
@@ -623,7 +623,7 @@ post:
 
     # 是否使用相对时间表示，比如："3 天前"
     # If true, it will be a relative time, such as: "3 days ago"
-    relative: false
+    relative: true
 
     # 提示标签类型
     # Note class
@@ -669,7 +669,7 @@ post:
 
     # 层级的折叠深度，0 是全部折叠，大于 0 后如果存在下级标题则默认展开
     # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
-    collapseDepth: 0
+    collapseDepth: 1
 
   # 版权声明，会显示在每篇文章的结尾
   # Copyright, will be displayed at the end of each post
@@ -966,7 +966,7 @@ category:
 tag:
   enable: true
   banner_img: https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/tag.png
-  banner_img_height: 80
+  banner_img_height: 70
   banner_mask_alpha: 0.3
   tagcloud:
     min_font: 15

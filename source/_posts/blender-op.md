@@ -2,9 +2,9 @@
 title: 使用blender搭建最简单的3d辅助透视
 tags: 
   - Notes
-  - shortcuts
+  - Blender
 categories: 
-  - [tutorials]
+  - [Tutorials, Lec.]
 date: 2024-08-07 20:00:00
 ---
 

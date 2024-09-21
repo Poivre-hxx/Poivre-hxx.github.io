@@ -2,10 +2,10 @@
 title: ai python for beginners笔记
 tags: 
   - Notes
-  - python
-  - llm
+  - Python
+  - Llm
 categories: 
-  - [tutorials]
+  - [Tutorials, Lec.]
 date: 2024-08-12 20:00:00
 ---
 
