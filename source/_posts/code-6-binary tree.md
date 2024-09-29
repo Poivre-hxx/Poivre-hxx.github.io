@@ -272,9 +272,26 @@ if (node->right) traversal(node->right, path + "->", result);
 
 P.S. 在C++中使用 `std::vector` 的范围构造函数时，遵循的是**`左闭右开`**原则。
 
+## 合并二叉树（617）
 
+题目是挺好理解的，将两棵二叉树对应节点的值合并即可。
 
+###### P.S. 写程序时存在的问题
 
+在遍历节点时原来是这样写的（以节点的左子树为例）：
+
+在满足“node1的左节点不存在 && node2的左节点存在”的情况时，执行赋值操作后多写了一个return，导致后面的对两棵树右节点的判断没有执行！
+
+故，应该把return放到递归操作的最后在执行一下。
+
+```c++
+    if (node1 && node2 && node1->left && node2->left) traversal(node1->left, node2->left);
+    else if (!node1->left && node2->left)
+    {
+        node1->left = node2->left;
+        return;
+    }
+```
 
 
 
