@@ -7,7 +7,7 @@ layout: about
 
 ## 简介
 
-- 🎉 关于我: 运气难得爆种的蒟蒻、游戏开发糕手、图形渲染练习生、抽象头像画师、普普通通二次元
+- 🎉 关于我: 游戏开发糕手、图形渲染练习生、抽象头像画师、普普通通2.5次元
 - 📓 日常使用的编程语言:  ![C#](https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=fff) ![c++](https://img.shields.io/badge/-C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=fff) ![GLSL](https://img.shields.io/badge/-GLSL-007ACC?style=flat-square&logo=GLSL&logoColor=fff)
 - ✨ 我推的vtb: [hanser](https://space.bilibili.com/11073?spm_id_from=333.337.0.0)
 - 🎸 我推的音乐人: [星野源](https://music.163.com/#/artist?id=14242), [chilichill](https://music.163.com/#/artist?id=34477557)
