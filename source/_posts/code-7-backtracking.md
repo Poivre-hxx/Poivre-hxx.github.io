@@ -35,3 +35,13 @@ date: 2024-10-23 20:20:00
 3. 回溯函数的单层遍历逻辑
 
 ## 组合（77）
+
+整个过程感觉可以认为是在构造二叉树的过程，每一层往结果里push一个新的数，直到满足数量要求后向上返回。
+
+<img src="https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/image-20241025234100819.png" alt="image-20241025234100819" style="width:80%;" />
+
+##### PS. 剪枝
+
+当`剩余的数组size` <`数量要求`的时候，可以进行剪枝操作。 
+
+<img src="https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/image-20241025234620246.png" alt="image-20241025234620246" style="width:80%;" />
