@@ -6,6 +6,7 @@ tags:
 categories: 
   - [Games, Games101]
 date: 2024-10-27 20:20:00
+math: true
 ---
 
 hw1中使用矩阵表示变换过程的**数学推导**过程。
@@ -38,47 +39,64 @@ hw1中使用矩阵表示变换过程的**数学推导**过程。
 
      <img src="https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/image-20241027174009471.png" alt="image-20241027174009471" style="width:50%;" />
 
-     可以得到 $$y'=\frac{n}{z}y $$。
-
-     同理，可以得到 $$x'=\frac{n}{z}x $$。
-
-     在齐次坐标系下，使用第一步变换矩阵，可以使坐标 $$(\begin{matrix} x \\ y\\ z \\ 1 \end{matrix}) $$ 变换为 $$(\begin{matrix} nx/z \\ ny/z \\ z' \\ 1 \end{matrix})$$，也就是 $$(\begin{matrix} nx \\ ny \\ z'z \\ z \end{matrix})$$。
+     可以得到
+     $$
+     y'=\frac{n}{z}y
+     $$
+     同理，可以得到
+     $$
+     x'=\frac{n}{z}x 
+     $$
+     在齐次坐标系下，使用第一步变换矩阵，可以使
+     $$
+     坐标 (\begin{matrix} x \\ y\\ z \\ 1 \end{matrix})  变换为 (\begin{matrix} nx/z \\ ny/z \\ z' \\ 1 \end{matrix})，也就是(\begin{matrix} nx \\ ny \\ z'z \\ z \end{matrix})。
+     $$
+     
 
   2. 通过这个表达式，可以猜出一些这个`4*4`变换矩阵的参数，也就是 
 
-     ​	$$M_(persp→ortho)=(\begin{matrix} n & 0 & 0 & 0 \\ 0 & n & 0 & 0 \\ a & b & c & d \\ 0 & 0 & 1 & 0  \end{matrix})$$
-
+     ​	
+     $$
+     M_(persp→ortho)=(\begin{matrix} n & 0 & 0 & 0 \\ 0 & n & 0 & 0 \\ a & b & c & d \\ 0 & 0 & 1 & 0  \end{matrix})
+     $$
      还剩第三行的参数还没有得到，就要做到了！
 
-  3. 可以得到 $$z'z=ax+by+cz+d$$，根据常识可以得到 $$x$$ 和 $$y$$ 的坐标值对 $$z$$ 是没有影响的，故 $$a=0, b = 0$$。
+  3. 可以得到 `z'z=ax+by+cz+d`，根据常识可以得到 `x` 和 `y` 的坐标值对 `z` 是没有影响的，故 `a=0, b = 0`。
 
-     所以剩下的就是 $$z'z=cz+d$$。
+     所以剩下的就是 `z'z=cz+d`。
 
   4. 根据解方程的思想，有两个未知数，就得要两个方程才能解。
 
-     由于，顶点在近平面和远平面上时，变换后 $$z$$ 坐标是不会变的（$$z'=z$$），故进行带入。
+     由于，顶点在近平面和远平面上时，变换后 $$z$$ 坐标是不会变的（`z'=z`），故进行带入。
 
-     ​	$$n^2=cn+d$$ ①
-
-     ​	$$f^2=cf+d$$ ②
-
-     联立，解得，$$c=n+f, d=-nf$$。
+     $$
+     n^2=cn+d ① 
+     f^2=cf+d ②
+     $$
+     联立，解得
+     $$
+     c=n+f, d=-nf
+     $$
+     
 
   5. 也就是说！视景体变换矩阵为：
 
-     ​	$$M_(persp→ortho)=(\begin{matrix} n & 0 & 0 & 0 \\ 0 & n & 0 & 0 \\ 0 & 0 & n+f & -nf \\ 0 & 0 & 1 & 0  \end{matrix})$$
-
-     
+     $$
+     M_(persp→ortho)=(\begin{matrix} n & 0 & 0 & 0 \\ 0 & n & 0 & 0 \\ 0 & 0 & n+f & -nf \\ 0 & 0 & 1 & 0  \end{matrix})
+     $$
 
 - 正交投影变换矩阵
 
   这一个变换矩阵需要将长方体的视景体压缩为边长为1的立方体，并且这个立方体的中心为世界坐标系的原点。
 
-  1. 可以求得视景体的高`h`为 $$h=n*tan(fov/2)*2$$，宽`w`为 $$w=h*aspect\_ratio$$，深度`z`为 $$z=f-n$$（注意这里的符号，`z`是指向**负方向**的）。
+  1. 可以求得视景体的高`h`为 `h=n*tan(fov/2)*2`，宽`w`为 `w=h*aspect\_ratio`，深度`z`为 `z=f-n`（注意这里的符号，`z`是指向**负方向**的）。
 
   2. 故，可以得到正交投影的变换矩阵为：
 
-     ​	$$M_ortho=(\begin{matrix} 2/w & 0 & 0 & 0 \\ 0 & 2/h & 0 & 0 \\ 0 & 0 & 2/z & -(n+f)/2 \\ 0 & 0 & 0 & 1 \end{matrix})$$
+     $$
+     M_ortho=(\begin{matrix} 2/w & 0 & 0 & 0 \\ 0 & 2/h & 0 & 0 \\ 0 & 0 & 2/z & -(n+f)/2 \\ 0 & 0 & 0 & 1 \end{matrix})
+     $$
+     
 
 ## 视口变换
 
@@ -122,6 +140,15 @@ hw1中使用矩阵表示变换过程的**数学推导**过程。
 
 计算将轴转到z方向的矩阵可以分解为两步：先将轴转到`zOx`面上（绕`x`轴），然后转到`z`轴上（在`xOz`面上转动）
 
-1. 可以得到转动角度$$\theta$$为：$$tan(\theta)=axis[1]/axis[2]$$。
-2. 同理，可以得到第二步的转动角度$$\alpha$$为： $$sin(\alpha)=(-1) * axis[0]$$
+1. 可以得到转动角度为：
+   $$
+   tan(\theta)=axis[1]/axis[2]
+   $$
+   
+
+2. 同理，可以得到第二步的转动角度为：
+   $$
+    sin(\alpha)=(-1) * axis[0]
+   $$
+   
 
