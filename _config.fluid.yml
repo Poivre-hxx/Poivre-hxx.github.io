@@ -1050,8 +1050,7 @@ links:
       title: "nickxu",
       intro: "Complaining can't solve the problem",
       link: "https://nickxu.me/",
-      avatar: "	https://nickxu.me/static/favicon.jpg
-"
+      avatar: "	https://nickxu.me/static/favicon.jpg"
     }
     - {
       title: "Xav1erSue",
@@ -1064,6 +1063,12 @@ links:
       intro: "",
       link: "https://blog.liangzilixueha.top/",
       avatar: "https://avatars.githubusercontent.com/u/85008631?v=4"
+    }
+    - {
+      title: "buyfakeTT",
+      intro: "技术宅拯救世界",
+      link: "https://www.tteam.icu/",
+      avatar: "	https://blog.tteam.icu/images/favicon.ico"
     }
 
   # 当成员头像加载失败时，替换为指定图片
