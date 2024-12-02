@@ -1035,12 +1035,6 @@ links:
   # Member item of page
   items:
     - {
-      title: "LYK0520",
-      intro: "",
-      link: "https://lyk0520.github.io/",
-      avatar: "https://avatars.githubusercontent.com/u/73179946?s=100&v=4"
-    }
-    - {
       title: "Wisteria",
       intro: "生有热烈，藏与俗常",
       link: "https://blog.psyqlk.space/",
@@ -1069,6 +1063,18 @@ links:
       intro: "技术宅拯救世界",
       link: "https://www.tteam.icu/",
       avatar: "	https://blog.tteam.icu/images/favicon.ico"
+    }
+    - {
+      title: "声控烤箱",
+      intro: "",
+      link: "https://blog.Kazoottt.top",
+      avatar: "	https://kazoottt.top/_image?href=%2F_astro%2Fkazoottt-avatar.Di58HPLJ.jpeg&f=webp"
+    }
+    - {
+      title: "LYK0520",
+      intro: "",
+      link: "https://lyk0520.github.io/",
+      avatar: "https://avatars.githubusercontent.com/u/73179946?s=100&v=4"
     }
 
   # 当成员头像加载失败时，替换为指定图片
