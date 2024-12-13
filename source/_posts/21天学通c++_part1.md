@@ -131,6 +131,8 @@ auto resultOfComparison = var1 <=> var2;
 
 #### 3. sizeof()不是函数，而是一个***运算符***！!!
 
+sizeof()可能对某些属性进行填充，使其与字边界对齐，也可能不这样做，取决于编译器。
+
 
 
 ## Chapter7 使用函数组织代码
