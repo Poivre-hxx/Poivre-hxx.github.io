@@ -1062,13 +1062,19 @@ links:
       title: "buyfakeTT",
       intro: "技术宅拯救世界",
       link: "https://www.tteam.icu/",
-      avatar: "	https://img.tteam.icu/i/2024/10/22/xhykcg-3.webp"
+      avatar: "https://img.tteam.icu/i/2024/10/22/xhykcg-3.webp"
     }
     - {
       title: "声控烤箱",
       intro: "",
       link: "https://blog.Kazoottt.top",
-      avatar: "	https://kazoottt.top/_image?href=%2F_astro%2Fkazoottt-avatar.Di58HPLJ.jpeg&f=webp"
+      avatar: "https://kazoottt.top/_image?href=%2F_astro%2Fkazoottt-avatar.Di58HPLJ.jpeg&f=webp"
+    }
+    - {
+      title: "Roi",
+      intro: "",
+      link: "https://roi.moe/",
+      avatar: "https://static.cloudflare.ltd/Ray_CDN/header.png"
     }
     - {
       title: "LYK0520",
