@@ -107,9 +107,35 @@ Agent 是能够感知其所处环境并采取行动以实现特定目标或完�
 
 #### Memory
 
-###### 记忆的分类
+###### 人脑记忆的分类
 
-- 
+- 感觉记忆（Sensory Memory）
+
+  记忆的最初阶段，在原始刺激结束后，保留对感觉信息（视觉、听觉、触觉等）的印象，最多持续几秒
+
+- 短期记忆（Short-Term Memory）/ 工作记忆（Working Memory）
+
+  存储当下意识到的执行学习、推理等复杂认知任务所需的信息
+
+- 长期记忆（Long-Term Memory）
+
+  存储很长时间，且容量基本无限
+
+- <img src="https://lilianweng.github.io/posts/2023-06-23-agent/memory.png" alt="img" style="zoom:50%;" />
+
+###### 人脑记忆与LLM之间类似的映射关系
+
+- 感觉记忆 - 对原始输入（文本、图像或其他模态）的学习嵌入表示
+- 短期记忆 - 上下文学习，是短暂且有限的（受上下文窗口长度的限制）
+- 长期记忆 - 外部向量存储库
+
+#### Tools
+
+## 四、 Workfslow
+
+AI Workflow = Workflow + AI Node(Agent 等)
+
+由人来规划个步骤具体流程，实际的Agent 也可以在流程中充当一个节点，最终来准确实现既定任务。
 
 ## 参考
 
