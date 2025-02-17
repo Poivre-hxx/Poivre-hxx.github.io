@@ -13,6 +13,6 @@ layout: about
 - 🎸 我推的音乐人: [星野源](https://music.163.com/#/artist?id=14242), [chilichill](https://music.163.com/#/artist?id=34477557)
 - 🎨 我推的太太: [Bison仓鼠](https://www.pixiv.net/users/333556), [南澄酱_水母水母水](https://space.bilibili.com/12212425?spm_id_from=333.337.search-card.all.click), [花久花酒](https://www.pixiv.net/users/17783380),  [梭梭树](https://space.bilibili.com/8163245/?spm_id_from=333.999.0.0)
 - 🌱 单推的角色: [平泽唯](https://mzh.moegirl.org.cn/%E5%B9%B3%E6%B3%BD%E5%94%AF), [友利奈绪](https://mzh.moegirl.org.cn/%E5%8F%8B%E5%88%A9%E5%A5%88%E7%BB%AA)
-- 🎮 Steam: [黑道千金又han又sr](https://steamcommunity.com/profiles/76561199084505178)
+- 🎮 Steam: [糊椒](https://steamcommunity.com/profiles/76561199084505178)
 - 📫 email: poivre0101@gmail.com
 
