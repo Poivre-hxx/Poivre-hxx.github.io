@@ -139,10 +139,10 @@ AI Workflow = Workflow + AI Node(Agent 等)
 
 ## 参考
 
-1. [白熊游戏-LLM工具的基础知识]: https://gitee.com/chutianshu1981/AwesomeUnityTutorial/blob/main/AI%E9%A9%B1%E5%8A%A8%E6%B8%B8%E6%88%8F%E5%88%9B%E4%BD%9C101/ep02-LLM%20%E5%B7%A5%E5%85%B7%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md
+1. [白熊游戏-LLM工具的基础知识]: https://gitee.com/chutianshu1981/AwesomeUnityTutorial/blob/main/AI%E9%A9%B1%E5%8A%A8%E6%B8%B8%E6%88%8F%E5%88%9B%E4%BD%9C101/ep02-LLM%20%E5%B7%A5%E5%85%B7%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86.md	"白熊游戏-LLM工具的基础知识"
 
-2. [高级 RAG 技术：图解概览]: https://baoyu.io/translations/rag/advanced-rag-techniques-an-illustrated-overview
+2. [高级 RAG 技术：图解概览]: https://baoyu.io/translations/rag/advanced-rag-techniques-an-illustrated-overview	"高级 RAG 技术：图解概览"
 
-3. [WengLilian-LLM Powered Autonomous Agents]: https://lilianweng.github.io/posts/2023-06-23-agent/
+3. [WengLilian-LLM Powered Autonomous Agents]: https://lilianweng.github.io/posts/2023-06-23-agent/	"WengLilian-LLM Powered Autonomous Agents"
 
    

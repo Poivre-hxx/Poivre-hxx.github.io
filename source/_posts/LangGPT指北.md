@@ -9,7 +9,7 @@ categories:
 date: 2025-02-07 20:20:00
 ---
 
-j结构化提示词的使用指摘
+结构化提示词的使用指摘
 
 <!-- more -->
 
@@ -44,5 +44,5 @@ j结构化提示词的使用指摘
 作为角色 <Role>, 严格遵守 <Rules>, 使用默认 <Language> 与用户对话，友好的欢迎用户。然后介绍自己，并告诉用户 <Workflow>。
 ```
 
-[]: https://langgptai.feishu.cn/wiki/ASXOwDbTEiH9CUkXFA5cLHumn88	"LangGPT 结构化提示词"
+[LangGPT 结构化提示词]: https://langgptai.feishu.cn/wiki/ASXOwDbTEiH9CUkXFA5cLHumn88	"LangGPT 结构化提示词"
 
