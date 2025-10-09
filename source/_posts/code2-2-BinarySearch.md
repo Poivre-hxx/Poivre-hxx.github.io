@@ -144,3 +144,20 @@ long long right = 1LL * min_t * totalTrips;
 左端点：数组内的最大值
 
 右端点：数组和
+#### 875 爱吃香蕉的王可王可
+
+###### ts
+
+```typescript
+// 借助扩展运算符...将数组展开成独立的参数
+// Math.max()这个函数需要接受多个数值参数，而不是一个数组
+const piles = [3, 5, 2];
+let right = Math.max(...piles);
+
+// for...of 循环
+// 依次将数组中的每个元素赋值给常量p
+for (const p of piles) {
+    // 循环体
+}
+```
+
