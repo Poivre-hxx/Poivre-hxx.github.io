@@ -1,5 +1,5 @@
 ---
-title: git commit时的verified认证配置说明
+title: 如何配置 GitHub Desktop 的 Commit 签名验证（Verified）
 tags: 
   - git
 categories: 

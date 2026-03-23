@@ -1,5 +1,5 @@
 ---
-title: [win]如何逃离家庭版的魔爪
+title: win-如何逃离家庭版的魔爪
 tags: 
   - Notes
   - Windows
