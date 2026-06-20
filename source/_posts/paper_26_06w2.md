@@ -1,11 +1,11 @@
 ---
-title: 论文阅读-26-05w4
+title: 论文阅读-26-06w2
 tags: 
   - Notes
   - LLM
 categories: 
   - [Notes]
-date: 2026-05-30 20:20:00
+date: 2026-06-14 20:20:00
 
 ---
 
@@ -42,3 +42,21 @@ date: 2026-05-30 20:20:00
 2️⃣ Dynamic Action Generation Evaluation
 
 当玩家输入故事主线之外的新动作时，系统能不能动态生成合理的动作逻辑。选取5个故事，从中挑取15个 character / item 生成3个新的动词，评估 **Compilation Success** & **Semantic Success**
+
+
+
+## Baba Is AI: Break the Rules to Beat the Benchmark
+
+现有多模态大模型看起来很强，但一旦任务要求它们**理解、修改并组合规则**，能力会明显崩掉。只做了一个测试的benchmark。
+
+
+
+## From World-Gen to Quest-Line: A Dependency-Driven Prompt Pipeline for Coherent RPG Generation
+
+提出一个面向 RPG 内容生成的分阶段 LLM pipeline，把世界、角色、任务和扩展剧情串起来。它的目标是解决 LLM 一次性生成复杂游戏叙事时容易不连贯的问题。
+
+**pipeline**
+
+按图中的步骤生成资产
+
+<img src="https://pic-poivre.oss-cn-hangzhou.aliyuncs.com/pics/image-20260616162538743.png" alt="image-20260616162538743" style="width: 60%;" />
